@@ -11,7 +11,7 @@ module.exports = {
         port: 8080,
         contentBase: './public'
     },
-    puglins:[
+    plugins:[
         new ExtractTextPlugin('app.css')
     ], 
     module:{
