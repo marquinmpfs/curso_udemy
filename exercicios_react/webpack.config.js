@@ -8,18 +8,21 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contenteBase: './public'
+        contentBase: './public',
     },
-    resolve:{
+    // Adicionado no ex.3
+    resolve: {
         extensions: ['', '.js', '.jsx']
     },
-    module:{
+    module: {
         loaders: [{
-            test: /.jsx?$/,
+            test: /.js[x]?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
             query: {
-                presets: ['es2015', 'react']
+                presets: ['es2015', 'react'],
+                // O plugin foi adicionado no ex.12
+                plugins: ['transform-object-rest-spread']
             }
         }]
     }
